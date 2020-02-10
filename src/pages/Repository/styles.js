@@ -1,6 +1,55 @@
 import styled from 'styled-components';
 
+export const IssueFilters = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+  padding: 5px 0;
+
+  button {
+    color: #fff;
+    height: 30px;
+    width: 100px;
+    background: #666;
+    border: 0;
+    padding: 0 15px;
+    margin: 5px;
+    border-radius: 4px;
+  }
+
+  button[name=${props => props.filter}] {
+    background: #7159c1;
+  }
+`;
+
+export const IssuePaginator = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+
+  button {
+    color: #fff;
+    height: 30px;
+    background: #666;
+    border: 0;
+    padding: 0 15px;
+    margin: 10px;
+    border-radius: 4px;
+
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+`;
+
 export const Loading = styled.div`
+  background-color: #7159c1;
   color: #fff;
   font-size: 30px;
   font-weight: bold;
@@ -43,9 +92,6 @@ export const Owner = styled.div`
 `;
 
 export const IssueList = styled.ul`
-  padding-top: 30px;
-  margin-top: 30px;
-  border-top: 1px solid #eee;
   list-style: none;
 
   li {

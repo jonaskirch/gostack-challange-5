@@ -13,10 +13,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-
-  svg {
-    margin-right: 10px;
+    svg {
+      margin-right: 10px;
+    }
   }
 `;
 
